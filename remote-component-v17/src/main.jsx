@@ -3,11 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const render = (container) => {
+  if (container) {
+    ReactDOM.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+      container
+    );
+  }
+};
 
-export default App;
+export default render;
