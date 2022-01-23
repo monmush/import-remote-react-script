@@ -1,18 +1,25 @@
 {
   "name": "remote-component-v17",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/remote-component.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.js"
+    }
+  },
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "antd": "^4.18.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "antd": "^4.18.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "vite": "^2.7.2"
   }
 }

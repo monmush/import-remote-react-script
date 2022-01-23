@@ -5,9 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "react": "/node_modules/react/umd/react.development.js",
+          "react-dom": "/node_modules/react-dom/umd/react-dom.development.js"
+        }
+      }
+    </script>
+    <script src="node_modules/systemjs-babel/dist/systemjs-babel.js"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      System.import("./src/main.jsx");
+    </script>
   </body>
 </html>
